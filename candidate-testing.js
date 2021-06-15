@@ -13,7 +13,22 @@ let correctAnswer = "Sally Ride"
 let candidateAnswer; 
 let questions;
 let correctAnswers;
-let candidateAnswers;
+
+let question1 = input.question("True or false: 5 kilometers === 5000 meters");
+let answers1 = true;
+console.log(answers1);
+let candidate1; 
+let question2 = input.question("(5 + 3)/2 * 10 = ?");
+let answers2 = 40 
+let candi
+let question3 = input.question("Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?");
+let answers3 = "Trajectory";
+let question4 =input.question("What is the minimum crew size for the ISS?")
+let answer4 = 3;
+
+
+let questionArr = [question, question1, question2, question3,question4];
+let answersArr = ["Sally Ride", true, 40, "Trajectory", 3 ];
 
 
 function askForName() {
@@ -24,11 +39,16 @@ candidateName = input.question("Please enter your name:");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-candidateAnswer = input.question(question)
+let num = input.question()
+num = Number(num);
+
+for (let i = 0; i < questionArr.length; i++) {
+   console.log(questionArr[i]);
+
+   }
 
 
 
-}
 
 function gradeQuiz(candidateAnswers) {
 
